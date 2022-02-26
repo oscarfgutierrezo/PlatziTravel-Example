@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlatziTravel</title>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.3.4/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+<body class="font-Montserrat scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-white dark:scrollbar-thumb-gray-400 dark:scrollbar-track-gray-800">
+    <header>
+        <nav class="fixed w-full z-10 bg-gray-50 border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+            <div class="container px-5 flex flex-wrap justify-between items-center mx-auto">
+                <a href="#" class="flex">
+                    <span class="text-xl font-bold text-primary-900 dark:text-white">Platzi Travel</span>
+                </a>
+                <div class="flex items-center space-x-2 md:order-2">
+                    <button class="hidden p-2 sm:inline-flex items-center text-xl text-primary-900 dark:text-gray-400 dark:hover:text-white">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button id="toogle" class="p-2 inline-flex items-center text-xl text-primary-900 dark:text-gray-400 dark:hover:text-white">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button data-collapse-toggle="mobile-menu" type="button" class="p-2 inline-flex items-center text-xl text-primary-900 rounded-md md:hidden hover:bg-primary-500 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-700" aria-controls="mobile-menu-2" aria-expanded="false">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                    <ul class="flex flex-col md:flex-row md:space-x-4 lg:space-x-6 xl:space-x-8 md:mt-0 ">
+                        <li>
+                            <a href="#home" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-900 md:p-0 dark:text-gray-400 dark:border-gray-800 dark:md:hover:text-white" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#recomendations" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-900 md:p-0 dark:text-gray-400 dark:border-gray-800 dark:md:hover:text-white" aria-current="page">Recomendations</a>
+                        </li>
+                        <li>
+                            <a href="#trending-stays" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-900 md:p-0 dark:text-gray-400 dark:border-gray-800 dark:md:hover:text-white">Stays</a>
+                        </li>
+                        <li>
+                            <a href="#faqs" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-900 md:p-0 dark:text-gray-400 dark:border-gray-800 dark:md:hover:text-white">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#footer" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-900 md:p-0 dark:text-gray-400 dark:border-gray-800 dark:md:hover:text-white">About us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="dark:bg-gray-800">
+        <section class="home pt-12 mb-8" id="home">
+            <div class="bg-sanFrancisco bg-cover bg-center h-70vh sm:bg-sanFranciscoDesktop">
+                <div class="container mx-auto h-full w-10/12 flex flex-col justify-around items-center sm:h-1/2 sm:justify-end sm:items-start">
+                    <h1 class="hidden text-4xl font-bold mb-8 sm:flex">Find More Locations <br> like this</h1>
+                    <label class="relative focus-within:w-11/12 sm:hidden">
+                        <span class="absolute inset-y-0 flex items-center pl-3">
+                            <img src="./public/img/search-icon.svg" alt="icono de lupa">
+                        </span>
+                        <input class="w-full rounded-full py-2 pl-9 pr-3 border-none shadow-md focus:border-none focus:ring-4 focus:ring-primary-900 focus:ring-opacity-40" placeholder="San Francisco" type="text" name="search"/>
+                    </label>
+                    <button class="w-48 p-3 text-primary-900 font-semibold bg-white rounded-full shadow-md transition duration-500 hover:bg-primary-900 hover:text-white hover:-translate-y-1 hover:scale-110">Explore More</button>
+                </div>
+            </div>
+        </section>
+        <section class="recomendations container mx-auto mb-4 px-5" id="recomendations">
+            <h2 class="mb-4 text-2xl font-semibold text-primary-900 dark:text-white">Our Recomendations</h2>
+            <div class="recomendations__cards-container w-full py-4 snap-x flex space-x-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-white dark:scrollbar-thumb-gray-400 dark:scrollbar-track-gray-800">
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-norway bg-cover"></div>
+                    <div class="w-full h-2/5 p-3">
+                        <p class="text-lg font-bold">Norway</p>
+                        <p class="">Beautiful landscapes</p>
+                    </div>
+                </div>
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-raja bg-cover"></div>
+                    <div class="w-full h-2/5 p-3 ">
+                        <p class="text-lg font-bold">Raja Ampat</p>
+                        <p class="">Infinite nature</p>
+                    </div>
+                </div>
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-yosemite bg-cover"></div>
+                    <div class="w-full h-2/5 p-3">
+                        <p class="text-lg font-bold">Yosemite</p>
+                        <p class="">A break from the world</p>
+                    </div>
+                </div>
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-norway bg-cover"></div>
+                    <div class="w-full h-2/5 p-3">
+                        <p class="text-lg font-bold">Seattle</p>
+                        <p class="">Big City</p>
+                    </div>
+                </div>
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-switzerland bg-cover"></div>
+                    <div class="w-full h-2/5 p-3">
+                        <p class="text-lg font-bold">Switzerland</p>
+                        <p class="">Beautiful landscapes</p>
+                    </div>
+                </div>
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-new_york bg-cover"></div>
+                    <div class="w-full h-2/5 p-3">
+                        <p class="text-lg font-bold">New York</p>
+                        <p class="">Concrete jungle</p>
+                    </div>
+                </div>
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-nuqui bg-cover"></div>
+                    <div class="w-full h-2/5 p-3">
+                        <p class="text-lg font-bold">Nuqui</p>
+                        <p class="">Natural paradise</p>
+                    </div>
+                </div>
+                <div class="recomendations__card snap-center">
+                    <div class="w-full h-3/5 bg-atenas bg-cover"></div>
+                    <div class="w-full h-2/5 p-3">
+                        <p class="text-lg font-bold">Athens</p>
+                        <p class="">Classic city</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trending-stays container mx-auto mb-8 px-5" id="trending-stays">
+            <h2 class="mb-8 text-2xl font-semibold text-primary-900 dark:text-white">Trending Stays</h2>
+            <div class="flex flex-col space-y-5">
+                <div class="trending-stays__card bg-chicago lg:h-[40rem] lg:text-right">
+                    <h3 class="trending-stays__card-title">Chicago</h3>
+                    <p class="trending-stays__card-info">2 rooms, bathroom, kitchen, <br> studio and pool</p>
+                </div>
+                <div class="flex flex-col lg:flex-row space-y-5 lg:space-x-5 lg:space-y-0">
+                    <div class="trending-stays__card bg-LA lg:w-2/5 lg:h-auto">
+                        <h3 class="trending-stays__card-title">Los Angeles</h3>
+                        <p class="trending-stays__card-info">4 rooms, 3 bathrooms, <br> kitchen and private pool.</p>
+                    </div>
+                    <div class="flex flex-col space-y-5 lg:w-3/5">
+                        <div class="trending-stays__card bg-miami">
+                            <h3 class="trending-stays__card-title">Miami</h3>
+                            <p class="trending-stays__card-info">3 rooms, 2 bathrooms, kitchen <br> and amazing sea view.</p>
+                        </div>
+                        <div class="trending-stays__card bg-bali">
+                            <h3 class="trending-stays__card-title">Bali</h3>
+                            <p class="trending-stays__card-info">2 rooms, 2 bathrooms, kitchen <br> and private pool.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faqs container mx-auto px-5 pb-8" id="faqs">
+            <h2 class="mb-8 text-2xl font-semibold text-primary-900 dark:text-white">FAQs</h2>
+            <div class="flex flex-col space-y-4">
+                <div>
+                    <p class="text-lg text-primary-900 dark:text-gray-300 font-semibold mb-1">Payment Methods</p>
+                    <p class="dark:text-gray-400">We accept VISA, MasterCard, American Express, Paypal and Binance</p>
+                </div>
+                <div>
+                    <p class="text-lg text-primary-900 dark:text-gray-300 font-semibold mb-1">Ticket Refundable</p>
+                    <p class="dark:text-gray-400">Must of the tickets are non-refundable. Unless you purchase an unrestricted airline ticket.</p>
+                </div>
+                <div>
+                    <p class="text-lg text-primary-900 dark:text-gray-300 font-semibold mb-1">Cancel/Amend Booking</p>
+                    <p class="dark:text-gray-400">Please see our Terms & Conditions for full details.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-50 dark:bg-gray-300" id="footer">
+        <div class="container mx-auto p-5">
+            <h2 class="mb-2 text-lg font-semibold text-gray-500 dark:text-gray-700">About us</h2>
+            <ul class="mb-2 text-gray-400 space-y-1 text-sm dark:text-gray-600">
+                <li><a href="#">Investors</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Term and Conditions</a></li>
+                <li><a href="#">Platzi Traven, inc</a></li>
+                <li><a href="#">Follow us</a></li>
+            </ul>
+            <div class="text-2xl text-gray-400 flex space-x-3 dark:text-gray-600">
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
+    <script>
+        const htmlElement = document.querySelector("html")
+        const toggleButton = document.querySelector("#toogle")
+
+        toggleButton.addEventListener("click", () => {
+            htmlElement.classList.toggle("dark");
+        })
+    </script>
+
+</body>
+</html>
